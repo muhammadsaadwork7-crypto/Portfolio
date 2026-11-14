@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Sparkles, Terminal, Code2, Cpu } from "lucide-react";
+import { Sparkles, Code2, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Experience() {

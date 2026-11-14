@@ -109,6 +109,7 @@ React, Node.js, Express, MongoDB, TypeScript, Next.js, Tailwind, Python, AI Inte
               src="/portrait.png"
               alt="Muhammad Saadullah"
               fill
+              sizes="(min-width: 1024px) 440px, (min-width: 640px) 380px, 280px"
               priority
               className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
             />

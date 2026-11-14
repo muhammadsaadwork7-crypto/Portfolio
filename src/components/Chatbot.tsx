@@ -49,6 +49,9 @@ const SUGGESTIONS = [
   { label: "How to contact him?", key: "contact" }
 ];
 
+const generateId = () => Math.random().toString(36).substring(2, 9);
+const createTimestamp = () => new Date();
+
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -56,7 +59,7 @@ export default function Chatbot() {
       id: "welcome",
       sender: "bot",
       text: "Hello! I'm Saad's AI Assistant. Ask me anything about his skills, education, projects, or contact details!",
-      timestamp: new Date()
+      timestamp: createTimestamp()
     }
   ]);
   const [inputValue, setInputValue] = useState("");
@@ -93,10 +96,10 @@ export default function Chatbot() {
     if (!textToSend.trim()) return;
 
     const userMessage: Message = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: generateId(),
       sender: "user",
       text: textToSend,
-      timestamp: new Date()
+      timestamp: createTimestamp()
     };
 
     setMessages((prev) => [...prev, userMessage]);
@@ -106,10 +109,10 @@ export default function Chatbot() {
     setTimeout(() => {
       const responseText = processResponse(textToSend);
       const botMessage: Message = {
-        id: Math.random().toString(36).substr(2, 9),
+        id: generateId(),
         sender: "bot",
         text: responseText,
-        timestamp: new Date()
+        timestamp: createTimestamp()
       };
       setMessages((prev) => [...prev, botMessage]);
       setIsTyping(false);
@@ -183,7 +186,7 @@ export default function Chatbot() {
                 </div>
                 <div>
                   <h3 className="font-sans text-sm font-semibold tracking-wide text-white flex items-center gap-1">
-                    Saad's Assistant <Sparkles className="w-3.5 h-3.5 text-zinc-400" />
+                    Saad&apos;s Assistant <Sparkles className="w-3.5 h-3.5 text-zinc-400" />
                   </h3>
                   <p className="text-[10px] text-zinc-400">Offline Knowledge Base</p>
                 </div>

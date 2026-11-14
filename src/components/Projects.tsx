@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Github, ExternalLink, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Github, ExternalLink, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const PROJECTS = [
@@ -144,6 +144,7 @@ export default function Projects() {
                   src={proj.image}
                   alt={proj.title}
                   fill
+                  sizes="(min-width: 1376px) 568px, (min-width: 1024px) calc(50vw - 72px), (min-width: 640px) calc(100vw - 96px), calc(100vw - 48px)"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-80"
                 />
               </div>
