@@ -6,39 +6,6 @@ import { ArrowDown, Mail, Briefcase, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const handleDownloadResume = () => {
-    // Generate a simple text-based resume file for downloading
-    const resumeText = `MUHAMMAD SAADULLAH - SOFTWARE ENGINEER
-Email: muhammadsaad.work7@gmail.com
-Phone: +92 3166033217
-LinkedIn: https://www.linkedin.com/in/muhammad-saad-b40679406/
-GitHub: https://github.com/muhammadsaadwork7-crypto
-
-EDUCATION:
-BS in Computer Science - COMSATS University Islamabad (Sahiwal Campus)
-CGPA: 3.84 / 4.00 | 2023 - Present
-
-PROJECTS:
-1. Bookstore (MERN Stack)
-   - GitHub: https://github.com/muhammadsaadwork7-crypto/Book-Store-Mern-Project
-2. Airbnb Clone (Node.js, Express, MongoDB, EJS)
-   - GitHub: https://github.com/muhammadsaadwork7-crypto/Airbnb-clone
-
-TECHNICAL SKILLS:
-React, Node.js, Express, MongoDB, TypeScript, Next.js, Tailwind, Python, AI Integrations
-`;
-
-    const blob = new Blob([resumeText], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "Muhammad_Saadullah_Resume.txt";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  };
-
   return (
     <section
       id="home"
@@ -158,12 +125,15 @@ React, Node.js, Express, MongoDB, TypeScript, Next.js, Tailwind, Python, AI Inte
               >
                 <Mail className="w-3.5 h-3.5" /> Contact Me
               </a>
-              <button
-                onClick={handleDownloadResume}
+              <a
+                href="/Muhammad_Saadullah_Resume.pdf"
+                download="Muhammad_Saadullah_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[10px] font-sans font-bold uppercase tracking-wider border border-white/10 hover:border-white text-white px-6 py-3 rounded-full bg-white/[0.02] hover:bg-white/5 transition-all duration-300 flex items-center gap-1.5 cursor-pointer"
               >
                 <FileText className="w-3.5 h-3.5" /> Resume
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
