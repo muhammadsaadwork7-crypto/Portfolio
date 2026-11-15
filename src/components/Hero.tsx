@@ -12,7 +12,7 @@ export default function Hero() {
       className="relative min-h-screen w-full bg-[#0A0A0A] flex flex-col justify-center items-center overflow-hidden pt-28 pb-16 px-6 sm:px-12"
     >
       {/* Premium Luxury Glow in Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gradient-to-tr from-amber-500/10 via-zinc-500/5 to-transparent rounded-full blur-[100px] pointer-events-none animate-pulse-glow" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-87.5 sm:w-150 h-87.5 sm:h-150 bg-linear-to-tr from-amber-500/10 via-zinc-500/5 to-transparent rounded-full blur-[100px] pointer-events-none animate-pulse-glow" />
 
       {/* Main Container */}
       <div className="relative w-full max-w-7xl flex flex-col justify-between items-center z-10 flex-1">
@@ -29,7 +29,7 @@ export default function Hero() {
               Hey,
             </h2>
             {/* Status Badge */}
-            <div className="mt-6 flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/5 bg-white/[0.02] backdrop-blur-md">
+            <div className="mt-6 flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/5 bg-white/2 backdrop-blur-md">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
@@ -53,7 +53,7 @@ export default function Hero() {
             <h2 className="font-serif italic font-light text-5xl sm:text-7xl lg:text-8xl text-white tracking-wide leading-none">
               there
             </h2>
-            <p className="mt-6 max-w-[240px] text-xs font-sans text-zinc-400 tracking-wide leading-relaxed">
+            <p className="mt-6 max-w-60 text-xs font-sans text-zinc-400 tracking-wide leading-relaxed">
               Specialized in Full-Stack MERN, AI integration, and Scalable Web Apps.
             </p>
           </motion.div>
@@ -64,12 +64,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="relative w-[280px] sm:w-[380px] lg:w-[440px] aspect-[4/5] my-6 md:-my-12 select-none group"
+          className="relative w-70 sm:w-95 lg:w-110 aspect-4/5 my-6 md:-my-12 select-none group"
         >
           {/* Subtle frame border */}
           <div className="absolute inset-0 border border-white/10 rounded-3xl transition-transform duration-700 group-hover:scale-102 group-hover:border-white/20" />
           {/* Gold Glow inside frame */}
-          <div className="absolute inset-4 bg-gradient-to-t from-amber-500/10 via-transparent to-transparent opacity-50 rounded-2xl blur-lg" />
+          <div className="absolute inset-4 bg-linear-to-t from-amber-500/10 via-transparent to-transparent opacity-50 rounded-2xl blur-lg" />
           
           <div className="absolute inset-2 overflow-hidden rounded-2xl bg-zinc-950">
             <Image
@@ -121,7 +121,7 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="text-[10px] font-sans font-bold uppercase tracking-wider border border-white/10 hover:border-white text-white px-6 py-3 rounded-full bg-white/[0.02] hover:bg-white/5 transition-all duration-300 flex items-center gap-1.5"
+                className="text-[10px] font-sans font-bold uppercase tracking-wider border border-white/10 hover:border-white text-white px-6 py-3 rounded-full bg-white/2 hover:bg-white/5 transition-all duration-300 flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5" /> Contact Me
               </a>
@@ -130,7 +130,7 @@ export default function Hero() {
                 download="Muhammad_Saadullah_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] font-sans font-bold uppercase tracking-wider border border-white/10 hover:border-white text-white px-6 py-3 rounded-full bg-white/[0.02] hover:bg-white/5 transition-all duration-300 flex items-center gap-1.5 cursor-pointer"
+                className="text-[10px] font-sans font-bold uppercase tracking-wider border border-white/10 hover:border-white text-white px-6 py-3 rounded-full bg-white/2 hover:bg-white/5 transition-all duration-300 flex items-center gap-1.5 cursor-pointer"
               >
                 <FileText className="w-3.5 h-3.5" /> Resume
               </a>
