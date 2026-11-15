@@ -1,11 +1,24 @@
 "use client";
 
 import React from "react";
-import { Sparkles, Code2, Cpu } from "lucide-react";
+import Image from "next/image";
+import { Sparkles, Code2, Cpu, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
+interface ExperienceItem {
+  role: string;
+  company: string;
+  duration: string;
+  description: string;
+  location?: string;
+  badge?: string;
+  icon?: React.ReactNode;
+  logo?: string;
+  tags?: string[];
+}
+
 export default function Experience() {
-  const highlightExperiences = [
+  const highlightExperiences: ExperienceItem[] = [
     {
       role: "Aspiring Full-Stack Software Engineer",
       company: "Open for Opportunities / Freelance",
@@ -26,6 +39,16 @@ export default function Experience() {
       duration: "2024 - Present",
       description: "Experimented with computer vision (YOLO object detection, OpenCV image processing) and LLM agent concepts to embed intelligent prediction capabilities inside standard web architectures.",
       icon: <Cpu className="w-5 h-5 text-white" />
+    },
+    {
+      role: "Web Developer",
+      company: "The Web Concept · Internship",
+      duration: "Jul 2026 - September 2026 · 3 mos",
+      location: "Faisalabad, Punjab, Pakistan · On-site",
+      badge: "Present",
+      description: "Working as a full-stack web developer intern at The Web Concept in Faisalabad, Pakistan. Building hands-on real-world web applications and scalable solutions with the organization, developing component-based architectures, responsive user interfaces, RESTful APIs, and strengthening core full-stack software engineering skills.",
+      logo: "/the-web-concept-logo.png",
+      tags: ["Full Stack", "React", "Node.js", "Express", "REST APIs", "Tailwind CSS", "Git"]
     }
   ];
 
@@ -42,7 +65,7 @@ export default function Experience() {
             Experience
           </h2>
           <p className="mt-4 text-sm font-sans text-zinc-400 leading-relaxed max-w-xl">
-            Currently a fresher but highly focused on practical, hands-on software development. Building complex application architectures and refining engineering standards.
+            Hands-on professional internship and project-based experience building scalable, modern web applications, robust REST APIs, and responsive architectures.
           </p>
         </div>
 
@@ -58,28 +81,81 @@ export default function Experience() {
               className="relative"
             >
               {/* Timeline dot icon */}
-              <div className="absolute -left-[53px] sm:-left-[69px] top-1.5 w-10 h-10 rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center">
-                {exp.icon}
+              <div className="absolute -left-[53px] sm:-left-[69px] top-1.5 w-10 h-10 rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center overflow-hidden">
+                {exp.logo ? (
+                  <div className="w-7 h-7 relative flex items-center justify-center">
+                    <Image
+                      src={exp.logo}
+                      alt={exp.company}
+                      width={28}
+                      height={28}
+                      className="object-contain"
+                    />
+                  </div>
+                ) : (
+                  exp.icon
+                )}
               </div>
 
               {/* Card content */}
               <div className="p-6 sm:p-8 rounded-2xl border border-white/5 bg-white/[0.01] hover:border-white/10 hover:bg-white/[0.02] transition-all duration-300">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                  <div>
-                    <h3 className="text-base sm:text-lg font-sans font-bold text-white tracking-wide">
-                      {exp.role}
-                    </h3>
-                    <p className="text-xs font-sans text-zinc-400 mt-0.5">
-                      {exp.company}
-                    </p>
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4">
+                  <div className="flex items-start gap-3.5">
+                    {exp.logo && (
+                      <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 p-1.5 flex items-center justify-center shrink-0 mt-0.5">
+                        <Image
+                          src={exp.logo}
+                          alt={exp.company}
+                          width={32}
+                          height={32}
+                          className="object-contain"
+                        />
+                      </div>
+                    )}
+                    <div>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="text-base sm:text-lg font-sans font-bold text-white tracking-wide">
+                          {exp.role}
+                        </h3>
+                        {exp.badge && (
+                          <span className="text-[9px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border border-cyan-400/40 text-cyan-300 bg-cyan-400/10">
+                            {exp.badge}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs font-sans text-zinc-400 mt-1">
+                        {exp.company}
+                      </p>
+                      {exp.location && (
+                        <div className="flex items-center gap-1.5 text-[11px] font-sans text-zinc-500 mt-1">
+                          <MapPin className="w-3 h-3 text-zinc-500 shrink-0" />
+                          <span>{exp.location}</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-amber-500/80 shrink-0">
+                  <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-amber-500/80 shrink-0 sm:self-start">
                     {exp.duration}
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm font-sans text-zinc-500 leading-relaxed tracking-wide">
+
+                <p className="text-xs sm:text-sm font-sans text-zinc-400 leading-relaxed tracking-wide">
                   {exp.description}
                 </p>
+
+                {/* Optional Tags */}
+                {exp.tags && exp.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 pt-4 mt-4 border-t border-white/5">
+                    {exp.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[10px] font-sans font-medium text-zinc-400 bg-white/5 px-2.5 py-1 rounded-md border border-white/5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
