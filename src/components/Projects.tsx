@@ -1,16 +1,29 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Github, ExternalLink, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import bookstoreImg from "../../public/bookstore.png";
+import airbnbImg from "../../public/airbnb.png";
 
-const PROJECTS = [
+interface ProjectItem {
+  title: string;
+  category: string;
+  description: string;
+  image: string | StaticImageData;
+  github: string;
+  live: string;
+  tech: string[];
+  features: string[];
+}
+
+const PROJECTS: ProjectItem[] = [
   {
     title: "Bookstore Application",
     category: "Full-Stack MERN Stack",
     description: "A complete production-ready digital bookstore platform featuring secure user accounts, cart functionality, ordering pathways, and a robust admin dashboard for library administration.",
-    image: "/bookstore.png",
+    image: bookstoreImg,
     github: "https://github.com/muhammadsaadwork7-crypto/Book-Store-Mern-Project",
     live: "#",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT Auth", "REST APIs"],
@@ -27,7 +40,7 @@ const PROJECTS = [
     title: "Airbnb Clone",
     category: "Node.js MVC Web Application",
     description: "An elegant home rental marketplace clone utilizing server-side rendering, featuring property uploads, reviews, user validations, and custom media workflows.",
-    image: "/airbnb.png",
+    image: airbnbImg,
     github: "https://github.com/muhammadsaadwork7-crypto/Airbnb-clone",
     live: "#",
     tech: ["Node.js", "Express.js", "MongoDB", "EJS Templates", "Cloudinary SDK", "Joi Validation"],

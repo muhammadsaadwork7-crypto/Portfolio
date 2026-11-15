@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { Sparkles, Code2, Cpu, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
+import webConceptLogo from "../../public/the-web-concept-logo.png";
 
 interface ExperienceItem {
   role: string;
@@ -13,7 +14,7 @@ interface ExperienceItem {
   location?: string;
   badge?: string;
   icon?: React.ReactNode;
-  logo?: string;
+  logo?: string | StaticImageData;
   tags?: string[];
 }
 
@@ -47,7 +48,7 @@ export default function Experience() {
       location: "Faisalabad, Punjab, Pakistan · On-site",
       badge: "Present",
       description: "Working as a full-stack web developer intern at The Web Concept in Faisalabad, Pakistan. Building hands-on real-world web applications and scalable solutions with the organization, developing component-based architectures, responsive user interfaces, RESTful APIs, and strengthening core full-stack software engineering skills.",
-      logo: "/the-web-concept-logo.png",
+      logo: webConceptLogo,
       tags: ["Full Stack", "React", "Node.js", "Express", "REST APIs", "Tailwind CSS", "Git"]
     }
   ];
@@ -87,8 +88,8 @@ export default function Experience() {
                     <Image
                       src={exp.logo}
                       alt={exp.company}
-                      width={28}
-                      height={28}
+                      fill
+                      sizes="28px"
                       className="object-contain"
                     />
                   </div>
@@ -103,13 +104,15 @@ export default function Experience() {
                   <div className="flex items-start gap-3.5">
                     {exp.logo && (
                       <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 p-1.5 flex items-center justify-center shrink-0 mt-0.5">
-                        <Image
-                          src={exp.logo}
-                          alt={exp.company}
-                          width={32}
-                          height={32}
-                          className="object-contain"
-                        />
+                        <div className="w-8 h-8 relative">
+                          <Image
+                            src={exp.logo}
+                            alt={exp.company}
+                            fill
+                            sizes="32px"
+                            className="object-contain"
+                          />
+                        </div>
                       </div>
                     )}
                     <div>
