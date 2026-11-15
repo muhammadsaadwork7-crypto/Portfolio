@@ -76,7 +76,7 @@ export default function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                     >
-                      <div className="px-6 pb-6 pt-1 text-xs sm:text-sm font-sans text-zinc-400 leading-relaxed tracking-wide border-t border-white/5 mt-[-1px]">
+                      <div className="px-6 pb-6 pt-1 text-xs sm:text-sm font-sans text-zinc-400 leading-relaxed tracking-wide border-t border-white/5 mt-px">
                         {faq.answer}
                       </div>
                     </motion.div>
