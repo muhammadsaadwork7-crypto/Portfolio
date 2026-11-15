@@ -53,7 +53,7 @@ export default function About() {
               className="space-y-6 text-sm sm:text-base font-sans text-zinc-400 leading-relaxed tracking-wide"
             >
               <p>
-                I am Muhammad Saadullah, an aspiring Full-Stack Software Engineer with a passion for designing and building highly scalable, modern, and user-centric web applications. Currently completing my Bachelor&apos;s degree in Computer Science at COMSATS University, I balance academic excellence (CGPA: 3.84/4.00) with extensive hands-on project creation.
+                I am Muhammad Saadullah, an aspiring Full-Stack Software Engineer with a passion for designing and building highly scalable, modern, and user-centric web applications. Currently completing my Bachelor&apos;s degree in Computer Science at COMSATS University, I balance academic excellence (CGPA: 3.81/4.00) with extensive hands-on project creation.
               </p>
               <p>
                 My engineering philosophy is simple: write clean, maintainable code, model scalable schemas, and utilize cutting-edge AI technologies to build products that solve real-world problems. Whether constructing detailed APIs, developing smooth responsive UIs, or configuring complex database architectures, I strive for visual and structural perfection.
@@ -144,7 +144,7 @@ export default function About() {
                     CUMULATIVE GPA
                   </h5>
                   <p className="mt-1 font-sans text-xs text-white leading-relaxed font-bold">
-                    3.84 / 4.00
+                    3.81 / 4.00
                   </p>
                 </div>
               </div>
