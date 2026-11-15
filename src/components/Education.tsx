@@ -26,10 +26,10 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative p-8 sm:p-12 rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-950 via-zinc-900/50 to-black overflow-hidden group hover:border-white/20 transition-all duration-500"
+            className="relative p-8 sm:p-12 rounded-3xl border border-white/10 bg-linear-to-br from-zinc-950 via-zinc-900/50 to-black overflow-hidden group hover:border-white/20 transition-all duration-500"
           >
             {/* Ambient background glow inside card */}
-            <div className="absolute top-0 right-0 w-[250px] h-[250px] bg-amber-500/5 rounded-full blur-[80px] group-hover:bg-amber-500/10 transition-all duration-500" />
+            <div className="absolute top-0 right-0 w-62.5 h-62.5 bg-amber-500/5 rounded-full blur-[80px] group-hover:bg-amber-500/10 transition-all duration-500" />
             
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative z-10">
               
