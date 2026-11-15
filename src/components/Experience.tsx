@@ -81,7 +81,7 @@ export default function Experience() {
               className="relative"
             >
               {/* Timeline dot icon */}
-              <div className="absolute -left-[53px] sm:-left-[69px] top-1.5 w-10 h-10 rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center overflow-hidden">
+              <div className="absolute -left-13.25 sm:-left-17.25 top-1.5 w-10 h-10 rounded-full bg-zinc-950 border border-white/10 flex items-center justify-center overflow-hidden">
                 {exp.logo ? (
                   <div className="w-7 h-7 relative flex items-center justify-center">
                     <Image
@@ -98,7 +98,7 @@ export default function Experience() {
               </div>
 
               {/* Card content */}
-              <div className="p-6 sm:p-8 rounded-2xl border border-white/5 bg-white/[0.01] hover:border-white/10 hover:bg-white/[0.02] transition-all duration-300">
+              <div className="p-6 sm:p-8 rounded-2xl border border-white/5 bg-white/1 hover:border-white/10 hover:bg-white/2 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4">
                   <div className="flex items-start gap-3.5">
                     {exp.logo && (
