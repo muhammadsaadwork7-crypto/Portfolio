@@ -38,8 +38,13 @@ const PROFILE_DATA = {
   education: `Saad is currently studying:
 • Bachelor of Science in Computer Science (BS CS)
 • Institution: COMSATS University Islamabad (Sahiwal Campus)
-• CGPA: 3.84 / 4.00
-• Duration: 2023 - Present`
+• CGPA: 3.81 / 4.00
+• Duration: 2023 - Present`,
+  experience: `Saad's experience includes:
+• **Web Developer Intern** at **The Web Concept** (Faisalabad, Pakistan · On-site, Jul 2026 - Present). Developing hands-on real-world web applications, component-based architectures, REST APIs, and responsive frontends.
+• **Full-Stack Project Developer** (2023 - Present): Engineered full MERN Bookstore with JWT auth & cart, and an Airbnb clone with EJS and media uploads.
+• **Open to Opportunities**: Actively seeking Full-Stack Software Engineering roles.`,
+  resume: `You can view and download Muhammad Saadullah's official resume here: [Download Resume PDF](/Muhammad_Saadullah_Resume.pdf).`
 };
 
 const SUGGESTIONS = [
@@ -73,7 +78,11 @@ export default function Chatbot() {
   const processResponse = (userInput: string) => {
     const query = userInput.toLowerCase();
     
-    if (query.includes("about") || query.includes("who") || query.includes("saad") || query.includes("profile")) {
+    if (query.includes("resume") || query.includes("cv")) {
+      return PROFILE_DATA.resume;
+    } else if (query.includes("experience") || query.includes("internship") || query.includes("web concept") || query.includes("job")) {
+      return PROFILE_DATA.experience;
+    } else if (query.includes("about") || query.includes("who") || query.includes("saad") || query.includes("profile")) {
       return PROFILE_DATA.about;
     } else if (query.includes("skill") || query.includes("tech") || query.includes("languages") || query.includes("frontend") || query.includes("backend")) {
       return PROFILE_DATA.skills;
