@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     question: "Are you available for job opportunities or freelance contracts?",
-    answer: "Yes, I am actively seeking full-time roles, internships, and freelance development projects. Having maintaining an excellent academic record (3.84/4.00 CGPA) alongside building robust side projects, I am ready to bring value to modern engineering teams."
+    answer: "Yes, I am actively seeking full-time roles, internships, and freelance development projects. Having maintaining an excellent academic record alongside building robust side projects, I am ready to bring value to modern engineering teams."
   },
   {
     question: "Do you specialize in MERN stack development?",
