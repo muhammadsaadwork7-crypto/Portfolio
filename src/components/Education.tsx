@@ -85,7 +85,7 @@ export default function Education() {
                       ACADEMIC PERFORMANCE
                     </span>
                     <p className="text-xs font-sans text-zinc-300 font-medium">
-                      CGPA: <strong className="text-white text-sm font-semibold">3.84</strong> / 4.00
+                      CGPA: <strong className="text-white text-sm font-semibold">3.81</strong> / 4.00
                     </p>
                   </div>
                 </div>
