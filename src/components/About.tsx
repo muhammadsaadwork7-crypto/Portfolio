@@ -73,7 +73,7 @@ export default function About() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.1 }}
                     key={area.title}
-                    className="flex gap-4 p-5 rounded-2xl border border-white/5 bg-white/[0.01] hover:border-white/10 hover:bg-white/[0.02] transition-all duration-300"
+                    className="flex gap-4 p-5 rounded-2xl border border-white/5 bg-white/1 hover:border-white/10 hover:bg-white/2 transition-all duration-300"
                   >
                     <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
                       {area.icon}
@@ -98,10 +98,10 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-5 relative aspect-[4/5] w-full max-w-[420px] lg:max-w-none mx-auto group"
+            className="lg:col-span-5 relative aspect-4/5 w-full max-w-105 lg:max-w-none mx-auto group"
           >
             {/* Background Glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-white/5 rounded-3xl blur-2xl opacity-50" />
+            <div className="absolute inset-0 bg-linear-to-br from-amber-500/5 to-white/5 rounded-3xl blur-2xl opacity-50" />
             
             {/* Visual Frame */}
             <div className="absolute inset-0 border border-white/10 rounded-3xl bg-zinc-950/60 backdrop-blur-sm overflow-hidden flex flex-col p-6 sm:p-8 justify-between hover:border-white/20 transition-colors duration-500">
